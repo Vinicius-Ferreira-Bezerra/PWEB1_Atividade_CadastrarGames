@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type"text/css" href="/css/bootstrap.min.css" />
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th scope="col">Id</th>
+				<th scope="col">Nome</th>
+				<th scope="col">Genero</th>
+				<th scope="col">Preço</th>
+			</tr>
+		</thead>
+		<tbody>
+			<th th:each="jogos: ${keyGames}">
+				<td th:text="${jogos.id}"></td>
+				<td th:text="${jogos.nome}"></td>
+				<td th:text="${jogos.genero}"></td>
+				<td th:text="${jogos.preco}"></td>
+			</th>
+		</tbody>
+	</table>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
